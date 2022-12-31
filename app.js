@@ -139,4 +139,9 @@ function decimal() {
 function del() {
     currentCalc.textContent = currentCalc.textContent.toString().slice(0, -1);
     current = current.toString().slice(0, -1);
+    if (currentCalc.textContent === '' && current === '') {
+        currentCalc.textContent = '0';
+        current = '';
+        return;
+    }
 }
