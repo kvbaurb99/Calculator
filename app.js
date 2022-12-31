@@ -85,11 +85,11 @@ function calculate() {
     prev += current;
   } else if (operator === "-") {
     prev -= current;
-  } else if (operator === "x") {
+  } else if (operator === "×") {
     prev *= current;
-  } else if (operator === "/") {
+  } else if (operator === "÷") {
     if (current <= 0) {
-      prev = "Error";
+      prev = "Divide by 0!";
       setResult();
       return;
     }
