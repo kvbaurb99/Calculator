@@ -13,8 +13,9 @@ body {
 .calculator {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: minmax(120px, auto) repeat(5, 80px);
     width: 450px;
-    height: 650px;
+    height: 600px;
     position: absolute;
     top: 50%;
     left: 50%;
@@ -41,11 +42,12 @@ button:focus {
     align-items: flex-end;
     justify-content: space-between;
     padding: 40px;
+    word-wrap: break-word;
     word-break: break-all;
     box-shadow: 0px 4px 25px -10px rgba(0,0,0,0.7);
 }
 
-.calc {
+.prev-calc {
     font-size: 25px;
 }
 
