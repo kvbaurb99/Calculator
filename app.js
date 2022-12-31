@@ -5,7 +5,23 @@ const numberButtons = document.querySelectorAll('.number');
 const operatorButtons = document.querySelectorAll('.operator');
 const equalButton = document.querySelector('.equal');
 const clearButton = document.querySelector('.clear');
-const deleteButton = document.querySelector('.delete'); 
+const deleteButton = document.querySelector('.delete');
+let current = '';
+let prev = '';
+let operator = ''; 
+
+numberButtons.forEach(button => {
+    button.addEventListener('click', (e) => {
+        displayNumber(e.target.textContent);
+    })
+})
+
+function displayNumber(num) {
+    if (current.length <= 16) {
+        current += num;
+        currentCalc.textContent = current;
+    }
+}
 
 // 2. Basic calculations
 
