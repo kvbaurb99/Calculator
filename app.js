@@ -89,7 +89,7 @@ function calculate() {
     prev *= current;
   } else if (operator === "÷") {
     if (current <= 0) {
-      prev = "Divide by 0!";
+      alert('YOU CAN\'T DIVIDE BY 0!!!')
       setResult();
       return;
     }
