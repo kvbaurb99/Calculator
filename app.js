@@ -33,7 +33,11 @@ equalButton.addEventListener('click', () => {
     }
 })
 
+// on AC button clearing result
 clearButton.addEventListener('click', clear);
+
+// on DEL button removing last number
+deleteButton.addEventListener('click', del);
 
 // 3. Calculation functions
 
@@ -114,10 +118,24 @@ function roundNumber(num) {
     return Math.round(num * 100000) / 100000;
 }
 
+// clearing screen
 function clear() {
     current = '';
     prev = '';
     operator = '';
     currentCalc.textContent = '0';
     prevCalc.textContent = '';
+}
+
+// allowing to calculate decimal numbers
+function decimal() {
+    if (!current.includes('.')) {
+        current += '.'
+        currentCalc.textContent = current;
+    }
+}
+
+// removing last number 
+function del() {
+    currentCalc.textContent = currentCalc.textContent.toString().slice(0, -1);
 }
