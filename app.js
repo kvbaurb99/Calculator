@@ -138,4 +138,5 @@ function decimal() {
 // removing last number 
 function del() {
     currentCalc.textContent = currentCalc.textContent.toString().slice(0, -1);
+    current = current.toString().slice(0, -1);
 }
