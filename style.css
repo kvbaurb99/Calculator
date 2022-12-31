@@ -68,3 +68,15 @@ button:focus {
     grid-column: span 2;
 }
 
+footer {
+    position: relative;
+    top: 90vh;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+
+.year,
+.title {
+    opacity: 0.5;
+}
