@@ -64,13 +64,13 @@ function displayOperator(oper) {
         calculate();
         operator = oper;
         currentCalc.textContent = '0';
-        prevCalc.textContent = prev + ' ' + operator;
+        prevCalc.textContent = `${prev} ${operator}`;
     }
 }
 
 function checkOperator(str) {
     operator = str;
-    prevCalc.textContent = prev + ' ' + operator;
+    prevCalc.textContent = `${prev} ${operator}`;
     currentCalc.textContent = '0';
     current = '';
 }
@@ -105,7 +105,7 @@ function setResult() {
     if (prev.length <= 16) {
         currentCalc.textContent = prev;
     } else {
-        currentCalc.textContent = prev.slice(0, 16) + '...';
+        currentCalc.textContent = `${prev.slice(0, 16)} ...`;
     }
     prevCalc.textContent = '';
     operator = '';
