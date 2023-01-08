@@ -13,8 +13,8 @@ body {
 .calculator {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    grid-template-rows: minmax(120px, auto) repeat(5, 80px);
-    width: 450px;
+    grid-template-rows: minmax(120px, 150px) repeat(5, 70px);
+    width: 400px;
     height: 600px;
     position: absolute;
     top: 50%;
@@ -49,6 +49,7 @@ button:focus {
 
 .prev-calc {
     font-size: 25px;
+    margin-bottom: 10px;
 }
 
 .current-calc {
@@ -81,4 +82,28 @@ footer {
 .year,
 .title {
     opacity: 0.5;
+}
+
+@media only screen and (max-width: 400px) {
+    .calculator {
+        width: 320px;
+        height: 500px;
+        grid-template-rows: minmax(120px, 100px) repeat(5, 70px);
+    }
+
+    .result {
+        
+    }
+
+    .prev-calc {
+        font-size: 20px;
+        position: relative;
+        bottom: 12px;
+    }
+
+    .current-calc {
+        font-size: 35px;
+    }
+
+    
 }
